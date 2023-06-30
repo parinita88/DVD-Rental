@@ -1,6 +1,8 @@
 # Data Analysis of a DVD-Rental
 SQL Repository 
 
+![alt text](https://github.com/parinita88/DVD-Rental/Background-Image.jpg?raw=true)
+
 The data analysis focuses on understanding the DVD store's rental business by exploring customer behavior, rental patterns, revenue trends, and inventory management. The main objectives are to identify the number of rentals, revenue generated, and to assess if the DVD store needs more inventory.
 
 ## Table of Contents
