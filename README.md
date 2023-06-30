@@ -68,6 +68,7 @@ Here, you'll find queries that identify films based on the number of special fea
 ## SQL Functions
 
 Here is a list of the built-in SQL functions that was used in analyses related to the DVD store:
+
 Aggregation Functions:
   - COUNT()
   - SUM()
@@ -106,9 +107,7 @@ These functions are commonly used in SQL for various purposes such as aggregatin
 
 ## Conclusion
 
-This repository provides a comprehensive analysis of the DVD store's data, offering insights into customer behavior, rental patterns, revenue trends, and inventory management. The SQL queries can be used as a starting point for further analysis and decision-making.
-
-Overall, the data analysis provided valuable insights into customer preferences, rental patterns, revenue trends, and inventory management. This information can help the DVD store make informed decisions, improve customer satisfaction, and optimize its inventory to meet customer demands effectively.
+Overall, the data analysis provided a comprehensive analysis of the DVD store's data, offering insights into customer behavior, rental patterns, revenue trends, and inventory management. The SQL queries can be used as a starting point for further analysis and decision-making.
 
 Data Source - https://www.postgresqltutorial.com/postgresql-getting-started/postgresql-sample-database/
 
