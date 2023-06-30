@@ -32,7 +32,8 @@ GROUP BY 1
 ORDER BY 3 DESC;
 
 
--- how many items in rental table has been returned by customers
+-- How many items in rental table has been returned by customers 
+-- Number of items rented, returned,  not returned, and the average number of days rented
 SELECT 
 	CONCAT(first_name, ' ', last_name) AS full_name,
 	COUNT(rental_id) AS number_items_rented, 
@@ -44,7 +45,8 @@ LEFT JOIN customer USING (customer_id)
 GROUP BY 1;
 
 
--- if a customer repeats a rental
+-- if a customer repeats a rental item
+-- customer rents the same title more than once
 SELECT 
 	title, 
 	CONCAT(first_name, ' ', last_name) AS full_name ,
@@ -60,9 +62,9 @@ ORDER BY 3 DESC;
 
 -- Which customer id did not pay for their rentals by month more than twice a month
 SELECT  
-	EXTRACT(MONTH FROM return_date) , 
+	EXTRACT(MONTH FROM return_date) AS month , 
 	rental.customer_id, 
-	COUNT(*)
+	COUNT(*) AS no_of_cust
 FROM rental
 LEFT JOIN payment USING (rental_id)
 WHERE payment_date IS NULL
@@ -222,7 +224,7 @@ FROM payment
 ORDER BY 1
 
 
--- E.Inventory Analysis
+-- D.Inventory Analysis
 
 -- Count of inventory by titles
 SELECT 
@@ -268,7 +270,7 @@ WHERE no_of_copies_rented > avg_copies_rented_title
 ORDER BY 1,2;
 
 
--- F. Films with special features
+-- E. Films with special features
 SELECT 
 	UNNEST(special_features) AS special_feature, 
 	COUNT(*) AS no_of_film 
@@ -285,10 +287,6 @@ FROM film
 GROUP BY 1,2
 ORDER BY 1;
 
-describe film
-
-select rating, description
-from film
 
 
 
